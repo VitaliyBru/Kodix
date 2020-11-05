@@ -42,14 +42,21 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
-          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+          isProd ? {
+          loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: ''
+            }
+        } : 'style-loader',
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [
-                require(`autoprefixer`)
-              ],
+              postcssOptions: {
+                plugins: [
+                  require(`autoprefixer`)
+                ],
+              }
             }
           },
           'sass-loader'
@@ -116,7 +123,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `css/style.css`
+      filename: `css/kodix.style.css`
     }),
 
     new CleanWebpackPlugin(),

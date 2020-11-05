@@ -1,0 +1,28 @@
+// брейк поинты
+@mixin tablet-width {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-width {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Шрифты
+@mixin font($font-size, $line-height, $font-weight) {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: -0.2px;
+}
+
+// reset
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

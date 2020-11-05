@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  background-color: $white;
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
