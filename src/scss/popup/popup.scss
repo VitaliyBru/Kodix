@@ -340,7 +340,7 @@
 @include desktop-width {
   .popup__wrapper {
     width: 553px;
-    max-height: calc(100vh - 12%);
+    max-height: 80vh;
   }
 
   .popup__close {
